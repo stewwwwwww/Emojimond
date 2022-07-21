@@ -120,3 +120,7 @@ class Emojimon:
         Getter method for returning the id of the Emojimon object.
         """
         return self._id
+    def covert_python(self, json_file):
+        data = json.load(open(json_file))
+        self.__dict__ = data
+        
